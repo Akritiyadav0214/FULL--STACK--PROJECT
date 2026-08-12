@@ -1,5 +1,5 @@
 import bankRoutes from "./routes/bankRoutes.js";
-
+import transactionRoutes from "./routes/transactionRoutes.js";
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -14,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/banks", bankRoutes);
+app.use("/api/transactions", transactionRoutes);
 
 // Test Route
 app.get("/", (req, res) => {
